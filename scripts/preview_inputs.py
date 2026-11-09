@@ -100,7 +100,7 @@ def main():
         heat[..., 2] = (255 * np.clip(-scaled, 0, 1)).astype(np.uint8)
         heat[..., 1] = (70 * (1 - np.abs(scaled))).astype(np.uint8)
         heatmap = Image.fromarray(heat).resize((900, 236), Image.Resampling.NEAREST)
-        panel = Image.new("RGB", (1120, 338), "#131d2a")
+        panel = Image.new("RGB", (1120, 360), "#131d2a")
         panel.paste(heatmap, (195, 48))
         draw = ImageDraw.Draw(panel)
         draw.text(
@@ -118,7 +118,9 @@ def main():
             ("left gripper", 58),
         ]:
             y = 48 + row * 4
-            draw.text((10, y), label, fill="white")
+            label_y = y - 10 if row == 33 else y + 6 if row == 34 else y
+            draw.text((10, label_y), label, fill="white")
+            draw.line((125, label_y + 5, 190, y + 2), fill="#aaaaaa")
             draw.line((195, y, 1094, y), fill="#aaaaaa")
         names = payload.get("domain_names", ["agibotworld"] * a.shape[1])
         if isinstance(names, str):
@@ -131,10 +133,12 @@ def main():
             Image.fromarray(colors).resize((900, 12), Image.Resampling.NEAREST),
             (195, 292),
         )
+        for time in (0, 10, 20, 30):
+            x = 195 + round(time / 30 * 899)
+            draw.line((x, 305, x, 310), fill="white")
+            draw.text((x - (20 if time == 30 else 0), 313), f"{time}s", fill="white")
         draw.text(
-            (195, 313),
-            "0s                       10s                       20s                      30s | green=robot, yellow=camera",
-            fill="white",
+            (195, 339), "Domain routing: green = robot; yellow = camera", fill="white"
         )
         panels.append(panel)
     board(panels, 1, "action-trajectory.jpg")
