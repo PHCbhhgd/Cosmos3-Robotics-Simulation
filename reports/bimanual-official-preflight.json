@@ -1,0 +1,125 @@
+{
+  "checkpoint_id": "simulation_sfdmd_bimanual_prod_64N_chunk2_v002_step4@iter_000001380",
+  "sampling_steps": 4,
+  "samples": [
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "agibot_001_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 62,
+        "15": 838
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "agibot_034_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 43,
+        "15": 857
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "agibot_original_long60_019_bulk_seed2026",
+      "actions": [
+        1800,
+        59
+      ],
+      "domain_counts": {
+        "15": 1800
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "yam_019_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "16": 887,
+        "2": 13
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "yam_023_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "16": 900
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "agibot_mixed_007_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 385,
+        "15": 515
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_unifiedv1_hf.jsonl",
+      "name": "agibot_mixed_028_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 402,
+        "15": 498
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_mixed_action_hf.jsonl",
+      "name": "agibot_mixed_007_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 385,
+        "15": 515
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_mixed_action_hf.jsonl",
+      "name": "agibot_mixed_028_bulk_seed2026",
+      "actions": [
+        900,
+        59
+      ],
+      "domain_counts": {
+        "2": 402,
+        "15": 498
+      }
+    },
+    {
+      "manifest": "examples/inference/sim_bimanual_agibot_long60_hf.jsonl",
+      "name": "agibot_original_long60_019_bulk_seed2026",
+      "actions": [
+        1800,
+        59
+      ],
+      "domain_counts": {
+        "15": 1800
+      }
+    }
+  ],
+  "passed": true,
+  "scope": "Official CPU input validation only; 10 manifest rows represent 7 distinct samples. No video inference."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "planned_not_generated",
+  "tests": [
+    {"id": "bimanual-smoke", "input": "agibot_001", "action_prefix": 32, "expected_frames": 33, "fps": 30, "goal": "Small native action-conditioned rollout; not task-success evaluation"},
+    {"id": "bimanual-agibot001", "input": "agibot_001", "expected_frames": 901, "fps": 30, "goal": "Baseline versus recorded RGB; inspect gripper, bottle, packets and scanner"},
+    {"id": "bimanual-agibot034", "input": "agibot_034", "expected_frames": 901, "fps": 30, "goal": "Second scene and object identity"},
+    {"id": "bimanual-yam019", "input": "yam_019", "expected_frames": 901, "fps": 30, "goal": "Different robot domain; no cross-domain action substitution"},
+    {"id": "bimanual-mixed007", "input": "agibot_mixed_007", "expected_frames": 901, "fps": 30, "goal": "Review actual per-row robot/camera domain transitions"},
+    {"id": "bimanual-long60", "input": "agibot_original_long60_019", "expected_frames": 1801, "fps": 30, "goal": "Per-second continuity and identity review; no predeclared collapse threshold"},
+    {"id": "transfer-official-controls", "input": "example2", "controls": ["depth", "seg", "edge", "blur"], "expected_frames": 121, "fps": 30, "goal": "Official generic human-motion control baseline; not a robot sample"},
+    {"id": "transfer-robot-controls", "input": "agibot_001_gt_first121", "controls": ["edge", "blur"], "expected_frames": 121, "fps": 30, "goal": "Robot-specific RGB controls; compare arm, gripper, bottle and tabletop geometry"},
+    {"id": "transfer-robot-appearance", "input": "agibot_001_gt_first121", "controls": ["edge", "blur"], "seed": 2025, "goal": "After baseline success: change lighting/material text while preserving controls; assess geometric leakage"}
+  ],
+  "deferred": [
+    "Action counterfactuals require calibrated semantic trajectories; do not equate normalized all-zero vectors with stopping.",
+    "Robot depth/seg tests require real simulator or calibrated rendered GT; do not relabel edge/grayscale as metric depth.",
+    "Closed-loop policy tests require observation-to-action feedback and separate state/physics validation."
+  ]
+}

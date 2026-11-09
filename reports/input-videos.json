@@ -1,0 +1,118 @@
+{
+  "scope": "INPUT integrity only. These are not model inference outputs.",
+  "passed": true,
+  "videos": [
+    {
+      "video": "example2.mp4",
+      "source": "official Transfer example2 input",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "8094057f77401bd3558cd187f958ee0bf77114390ca6d6cdc6f4b870e93610ec",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "example2_blur.mp4",
+      "source": "official Transfer example2 input",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        832,
+        480
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "cc2ffa70e30d3bb8ac4ce5aa9166cb826c86923bd80ba4afcc31d0b23982bdcc",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "example2_depth.mp4",
+      "source": "official Transfer example2 input",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "748c7aa739a2e3d44daf4c5cd107b3e773374a47c4ad41ec9cf013c9286c4e3f",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "example2_edge.mp4",
+      "source": "official Transfer example2 input",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        832,
+        480
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "234b56511f4ab21bf10eb9c18c12fba414f0be95c5d2f0eda57086197569065d",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "example2_segmentation.mp4",
+      "source": "official Transfer example2 input",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "47b9b7683211baf1282b91e99efd8545e1e03966c3f05c37bd79f9eb642c46e9",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "agibot_001_gt.mp4",
+      "source": "official Bimanual recorded ground-truth RGB",
+      "frames": 901,
+      "declared_frames": 901,
+      "expected_frames": 901,
+      "fps": 30.0,
+      "dimensions": [
+        640,
+        360
+      ],
+      "last_frame_timestamp_s": 30.0,
+      "sha256": "9b520df89e6f881bf3a5a57116032d62cf11dbec0d0ae3a86d869f26b5a022aa",
+      "full_decode": true,
+      "passed": true
+    },
+    {
+      "video": "robot_rgb_121.mp4",
+      "source": "locally selected official RGB prefix; re-encoded with mp4v",
+      "frames": 121,
+      "declared_frames": 121,
+      "expected_frames": 121,
+      "fps": 30.0,
+      "dimensions": [
+        640,
+        360
+      ],
+      "last_frame_timestamp_s": 4.0,
+      "sha256": "afdb67ccbd98a714650ae7ad56ab1e02933b58dc829733dae4a66cd93d7fdb4e",
+      "full_decode": true,
+      "passed": true
+    }
+  ]
+}

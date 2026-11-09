@@ -1,0 +1,76 @@
+{
+  "scope": "CPU input-contract validation only; no model generation or quality evaluation.",
+  "validator": "cosmos_framework.inference.bimanual.BimanualActionContract.validate",
+  "passed": true,
+  "cases": [
+    {
+      "case": "official_59d_baseline",
+      "expected": "accept",
+      "actual": "accept",
+      "passed": true
+    },
+    {
+      "case": "wrong_action_width_58",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Action row 0 must have 59 values"
+    },
+    {
+      "case": "missing_action_row",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Expected exactly 900 action rows"
+    },
+    {
+      "case": "nan_value",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Action row 0 contains a non-finite or non-numeric value"
+    },
+    {
+      "case": "infinite_value",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Action row 0 contains a non-finite or non-numeric value"
+    },
+    {
+      "case": "boolean_value",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Action row 0 contains a non-finite or non-numeric value"
+    },
+    {
+      "case": "wrong_action_space",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "This checkpoint requires a normalized_unified_v1 action sidecar object; legacy native action arrays are incompatible."
+    },
+    {
+      "case": "unknown_domain",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Unsupported action domain; checkpoint supports ['abc_yam', 'agibot_gear_gripper', 'agibot_gear_gripper_ext', 'agibotworld', 'behavior1k_lerobot', 'camera_pose', 'hand_pose', 'molmoact2_yam', 'xdof_yam']"
+    },
+    {
+      "case": "domain_count_mismatch",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "domain_names must be one name or contain one name per action row"
+    },
+    {
+      "case": "camera_row_with_gripper_value",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "reason": "Action row 0 for domain 'camera_pose' has nonzero values in invalid unified-v1 slots [33]"
+    }
+  ]
+}

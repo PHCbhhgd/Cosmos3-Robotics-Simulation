@@ -1,0 +1,28 @@
+{
+  "scope": "CPU imports and CLI help only, not GPU inference; existing isolated environment reused.",
+  "python": "3.13.14",
+  "packages": {
+    "torch": "2.10.0+cu130",
+    "natten": "0.21.6.dev6+cu130.torch210.gb300",
+    "transformers": "4.57.6",
+    "diffusers": "0.39.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "framework_commit": "bbd4a67c3cf54cc6699464ad1259f3a0f6537da9",
+  "lock_check": {
+    "uv": "0.11.29",
+    "command": "uv lock --check",
+    "returncode": 0,
+    "resolved_packages": 595
+  },
+  "native_cli_help": {
+    "command": "python -m cosmos_framework.scripts.inference --help",
+    "COSMOS_TRAINING": "0",
+    "CUDA_VISIBLE_DEVICES": "-1",
+    "returncode": 0
+  },
+  "guardrail_note": "Bimanual official validation command disables guardrails; Transfer runner keeps default guardrails.",
+  "full_environment_sync_performed": false,
+  "kernel_probe_performed": false,
+  "generation_performed": false
+}

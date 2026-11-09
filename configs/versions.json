@@ -1,0 +1,28 @@
+{
+  "source": {
+    "url": "https://github.com/NVIDIA/cosmos-framework.git",
+    "commit": "bbd4a67c3cf54cc6699464ad1259f3a0f6537da9"
+  },
+  "models": {
+    "bimanual": {
+      "repo_id": "nvidia/Cosmos3-Nano-Sim-Bimanual",
+      "revision": "da4d2c09175e2a6dd5b237265318066d5134312e",
+      "gated": false
+    },
+    "transfer": {
+      "repo_id": "nvidia/Cosmos3-Nano-Sim-Transfer",
+      "revision": "45510d5b8cefa338b7abc01eb702cf1e9cdf6742",
+      "gated": false
+    }
+  },
+  "base_nano": {
+    "repo_id": "nvidia/Cosmos3-Nano",
+    "revision": "e59a53c25979a090fa8706c9acc0c254a6e89b92"
+  },
+  "wan_vae": {
+    "repo_id": "Wan-AI/Wan2.2-TI2V-5B",
+    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+    "file": "Wan2.2_VAE.pth"
+  },
+  "note": "Public model revisions resolved via mirror metadata. Generation compatibility and success must be reported separately."
+}

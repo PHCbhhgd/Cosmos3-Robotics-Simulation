@@ -1,0 +1,135 @@
+{
+  "observed_utc": "2026-11-09T05:44:57.801000+00:00",
+  "framework_commit": "bbd4a67c3cf54cc6699464ad1259f3a0f6537da9",
+  "framework_commit_matches_pin": true,
+  "models": {
+    "bimanual": {
+      "repo_id": "nvidia/Cosmos3-Nano-Sim-Bimanual",
+      "revision": "da4d2c09175e2a6dd5b237265318066d5134312e",
+      "attention": "three_way",
+      "four_step_schedule_matches": true,
+      "transformer_bytes_from_index": 30346273152,
+      "transformer_shards_required": 6,
+      "transformer_shards_present": 0,
+      "missing_transformer_shards": [
+        "transformer/diffusion_pytorch_model-00001-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00002-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00003-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00004-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00005-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00006-of-00006.safetensors"
+      ],
+      "inference_attempted": false,
+      "generation_passed": false
+    },
+    "transfer": {
+      "repo_id": "nvidia/Cosmos3-Nano-Sim-Transfer",
+      "revision": "45510d5b8cefa338b7abc01eb702cf1e9cdf6742",
+      "attention": "three_way",
+      "four_step_schedule_matches": true,
+      "transformer_bytes_from_index": 30312444288,
+      "transformer_shards_required": 6,
+      "transformer_shards_present": 0,
+      "missing_transformer_shards": [
+        "transformer/diffusion_pytorch_model-00001-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00002-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00003-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00004-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00005-of-00006.safetensors",
+        "transformer/diffusion_pytorch_model-00006-of-00006.safetensors"
+      ],
+      "inference_attempted": false,
+      "generation_passed": false
+    }
+  },
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 6684,
+      "memory_total_mib": 24564,
+      "utilization_percent": 0,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 21523,
+      "memory_total_mib": 24564,
+      "utilization_percent": 100,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    },
+    {
+      "index": 2,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 7991,
+      "memory_total_mib": 24564,
+      "utilization_percent": 0,
+      "compute_process_count": 2,
+      "idle_at_observation": false
+    },
+    {
+      "index": 3,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 22302,
+      "memory_total_mib": 24564,
+      "utilization_percent": 93,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    },
+    {
+      "index": 4,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 22717,
+      "memory_total_mib": 24564,
+      "utilization_percent": 100,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    },
+    {
+      "index": 5,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 21523,
+      "memory_total_mib": 24564,
+      "utilization_percent": 23,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    },
+    {
+      "index": 6,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 10440,
+      "memory_total_mib": 24564,
+      "utilization_percent": 3,
+      "compute_process_count": 3,
+      "idle_at_observation": false
+    },
+    {
+      "index": 7,
+      "name": "NVIDIA GeForce RTX 4090",
+      "compute_capability": "8.9",
+      "memory_used_mib": 5075,
+      "memory_total_mib": 24564,
+      "utilization_percent": 0,
+      "compute_process_count": 1,
+      "idle_at_observation": false
+    }
+  ],
+  "status": "prepared_pending_allocated_gpu",
+  "limitations": [
+    "No inference was launched on GPUs already running compute jobs.",
+    "RTX 4090/sm89 native three_way kernel compatibility is untested; the Sim-Auto gate is not evidence for these models.",
+    "Each BF16 transformer alone is about 30.3 GB; a single 24 GiB GPU cannot hold all its unsharded weights.",
+    "Idle observation is not a resource reservation. Obtain an allocation before launching.",
+    "No generated video, physics quality, success rate, latency or stability duration is established."
+  ]
+}
